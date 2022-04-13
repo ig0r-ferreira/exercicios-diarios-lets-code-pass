@@ -39,7 +39,7 @@ def calcular_salario_liquido(valor_hora, total_horas_trabalhadas):
 
     RESULT['Salário líquido'] = RESULT.get('Salário bruto') - sum(list(RESULT.values())[1:])
 
-    print('\n' + '\n'.join([f'{info}: R$ {valor}' for info, valor in RESULT.items()]))
+    print('\n' + '\n'.join([f'{info}: R$ {valor:.2f}' for info, valor in RESULT.items()]))
 
 
 calcular_salario_liquido(float(input('Valor da hora: R$ ').strip()),
