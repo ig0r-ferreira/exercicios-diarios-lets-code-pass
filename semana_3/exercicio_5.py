@@ -24,10 +24,10 @@ def existe_duplicado(lista):
 
 
 def solucao(matriz):
-    assert len(matriz) == 9, 'Erro: Matriz de tamanho inválido! A matriz ser 9 x 9.'
+    assert len(matriz) == 9, 'Erro: Matriz de tamanho inválido! A matriz deve ser 9 x 9.'
 
     for i, linha_ in enumerate(matriz):
-        assert len(linha_) == 9, 'Erro: Matriz de tamanho inválido! A matriz ser 9 x 9.'
+        assert len(linha_) == 9, 'Erro: Matriz de tamanho inválido! A matriz deve ser 9 x 9.'
         assert max(linha_) < 10 and min(linha_) > 0, 'Erro: Elementos fora do intervalo de 1 a 9!'
 
         if existe_duplicado(linha_) or existe_duplicado([matriz[j][i] for j in range(len(linha_))]):
